@@ -17,6 +17,8 @@ alias lla "ll -A"
 alias g git
 alias lg lazygit
 alias ide "source /Users/seanchen/my_bash/ide.sh"
+alias proxy "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
