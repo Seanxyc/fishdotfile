@@ -1,5 +1,6 @@
 set fish_greeting ""
 
+
 # theme
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
@@ -12,7 +13,7 @@ alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
-alias g "sudo git"
+alias g "sudo git" 
 alias lg "sudo lazygit" 
 # alias ide "source /Users/seanchen/my_bash/ide.sh"
 
@@ -35,7 +36,7 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   end
 end
 function nvm
-  bass source /usr/share/nvm/init-nvm.sh ';' nvm $argv
+  bass source /usr/share/nvm/init-nvm.sh';' nvm $argv
 end
 
 switch (uname)
