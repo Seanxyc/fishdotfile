@@ -1,7 +1,5 @@
 set fish_greeting ""
 
-set -gx TERM xterm-256color
-
 # theme
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
@@ -14,25 +12,18 @@ alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
-alias g git
-alias lg lazygit
-alias ide "source /Users/seanchen/my_bash/ide.sh"
-alias proxy "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+alias g "sudo git"
+alias lg "sudo lazygit" 
+# alias ide "source /Users/seanchen/my_bash/ide.sh"
 
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
 
 set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx PATH ~/.local/bin $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
-
-# Go
-set -g GOPATH $HOME/go
-set -gx PATH $GOPATH/bin $PATH
 
 # NVM
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'
@@ -44,7 +35,7 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   end
 end
 function nvm
-  bass source /Users/seanchen/.nvm/nvm.sh ';' nvm $argv
+  bass source /usr/share/nvm/init-nvm.sh ';' nvm $argv
 end
 
 switch (uname)
